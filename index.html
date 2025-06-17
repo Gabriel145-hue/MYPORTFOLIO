@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM6g5n4g5n4g5n4g5n4g5n4g5n4g5n4g5n4g5" crossorigin="anonymous">
+    <title>Gabriel Henrico E. Adiaton - Portfolio</title>
+    <style>
+        .project-card img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animation Styles */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-text {
+            animation: fadeIn 8s ease-in-out forwards;
+        }
+
+        /* Slide-in animation from left */
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .slide-in {
+            animation: slideInLeft 8s ease forwards; /* Set duration to 8 seconds */
+        }
+
+        /* Hover effect for skill boxes */
+        .skill-box {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .skill-box:hover {
+            background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+            transform: scale(1.05); /* Slightly scale up */
+        }
+
+        /* Hover effect for profile picture */
+        .profile-pic {
+            transition: transform 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 scroll-smooth transition duration-300" id="body" style="background-image: url('paolo.jpg'); background-size: cover; background-position: center;">
+    <!-- Navigation Header -->
+    <header class="bg-gradient-to-r from-red-600 to-black text-white p-4 fixed w-full z-10 shadow-lg transition duration-300 ease-in-out" id="header">
+        <nav class="flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Gabriel Henrico E. Adiaton</h1>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="bg-gray-700 text-white p-2 rounded-full hover:bg-gray-600 transition duration-300 flex items-center">
+                    <span id="theme-icon" class="text-xl">🌞</span>
+                </button>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="hover:bg-yellow-300 hover:text-gray-800 transition duration-300 p-2 rounded">Home</a></li>
+                    <li><a href="#skills" class="hover:bg-yellow-300 hover:text-gray-800 transition duration-300 p-2 rounded">Skills</a></li>
+                    <li><a href="#projects" class="hover:bg-yellow-300 hover:text-gray-800 transition duration-300 p-2 rounded">Projects</a></li>
+                    <li><a href="#about" class="hover:bg-yellow-300 hover:text-gray-800 transition duration-300 p-2 rounded">About Me</a></li>
+                    <li><a href="#contact" class="hover:bg-yellow-300 hover:text-gray-800 transition duration-300 p-2 rounded">Connect</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero bg-cover bg-center h-96" style="background-image: url('your-image-url.jpg');">
+        <div class="flex items-center justify-center h-full">
+            <h2 class="text-6xl text-white font-bold animate-text">Welcome to My Portfolio</h2>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="p-6 flex items-center mt-18 bg-transparent">
+        <img id="profile-pic" src="Profile.png" alt="Profile Picture" class="w-80 h-80 mr-16 shadow-lg profile-pic slide-in">
+        <div class="slide-in">
+            <h2 class="text-3xl font-bold text-white">About Me</h2>
+            <p class="mt-2 text-white">Hi! I'm Gabriel Henrico E. Adiaton, a passionate web developer dedicated to building beautiful, functional, and user-friendly websites. 
+                My journey started with a curiosity about how websites work, which quickly turned into a lasting passion for coding and digital design. 
+                Over time, I’ve developed strong skills in both front-end and back-end development, working with tools like HTML, CSS, JavaScript, React, and GitHub. 
+                I enjoy solving problems, creating intuitive user experiences, and bringing ideas to life through clean and efficient code. What motivates me most is the chance to make a positive impact through technology. 
+                I'm always eager to learn, grow, and collaborate with others to create meaningful digital experiences.</p>
+            <a href="about-me.html" class="mt-4 inline-block bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-black transition duration-300 slide-in">Read More</a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="p-6 mt-44"> 
+        <h2 class="text-3xl font-bold text-center text-white">My Skills</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+            <div class="skill-box bg-transparent p-4 shadow-lg rounded-lg text-center transition-transform duration-300">
+                <img src="Html.webp" alt="HTML" class="w-16 h-16 mx-auto mb-2">
+                <h3 class="font-bold text-white">HTML</h3>
+                <div class="progress-bar bg-gray-300 rounded-full h-2 mt-2">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill-box bg-transparent p-4 shadow-lg rounded-lg text-center transition-transform duration-300">
+                <img src="CSS.svg.png" alt="CSS" class="w-16 h-16 mx-auto mb-2">
+                <h3 class="font-bold text-white">CSS</h3>
+                <div class="progress-bar bg-gray-300 rounded-full h-2 mt-2">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill-box bg-transparent p-4 shadow-lg rounded-lg text-center transition-transform duration-300">
+                <img src="JS.jpg" alt="JavaScript" class="w-16 h-16 mx-auto mb-2">
+                <h3 class="font-bold text-white">JavaScript</h3>
+                <div class="progress-bar bg-gray-300 rounded-full h-2 mt-2">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="skill-box bg-transparent p-4 shadow-lg rounded-lg text-center transition-transform duration-300">
+                <img src="C.jpg" alt="C" class="w-16 h-16 mx-auto mb-2">
+                <h3 class="font-bold text-white">C</h3>
+                <div class="progress-bar bg-gray-300 rounded-full h-2 mt-2">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 70%;"></div>
+                </div>
+            </div>
+            <div class="skill-box bg-transparent p-4 shadow-lg rounded-lg text-center transition-transform duration-300">
+                <img src="C++.jpeg" alt="C++" class="w-16 h-16 mx-auto mb-2">
+                <h3 class="font-bold text-white">C++</h3>
+                <div class="progress-bar bg-gray-300 rounded-full h-2 mt-2">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 65%;"></div>
+                </div>
+            </div>
+            <div class="skill-box bg-transparent p-4 shadow-lg rounded-lg text-center transition-transform duration-300">
+                <img src="Python.png" alt="Basic Python" class="w-16 h-16 mx-auto mb-2">
+                <h3 class="font-bold text-white">Basic Python</h3>
+                <div class="progress-bar bg-gray-300 rounded-full h-2 mt-2">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="p-4 mt-32 bg-transparent">
+        <h2 class="text-3xl font-bold text-center text-white">My Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div class="project-card bg-transparent p-4 shadow-lg rounded-lg transition-transform duration-300 hover:shadow-xl hover:scale-105">
+                <img src="Playlist.png" alt="Project 1 Image" class="w-full h-48 object-cover rounded-lg mb-2">
+                <h3 class="font-bold text-white">Project 1: Playlist Video</h3>
+                <p class="text-white">A web application that allows users to create and manage video playlists. Built with HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/Gabriel145-hue/Playlist-Video" class="mt-4 inline-block bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-black transition duration-300">View Project</a>
+            </div>
+            <div class="project-card bg-transparent p-4 shadow-lg rounded-lg transition-transform duration-300 hover:shadow-xl hover:scale-105">
+                <img src="Portfolio.png" alt="Project 2 Image" class="w-full h-48 object-cover rounded-lg mb-2">
+                <h3 class="font-bold text-white">Project 2: My Portfolio</h3>
+                <p class="text-white">Welcome to my portfolio — I'm Gabriel Henrico Adiaton, a Web and Mobile Application Developer with a background in Information Technology. 
+                    This site showcases my projects, skills, and passion for building modern, user-friendly digital solutions.</p>
+                <a href="https://github.com/Gabriel145-hue/My-Portfolio.git" class="mt-4 inline-block bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-black transition duration-300">View Project</a>
+            </div>
+            <div class="project-card bg-transparent p-4 shadow-lg rounded-lg transition-transform duration-300 hover:shadow-xl hover:scale-105">
+                <img src="Infographics.png" alt="Project 3 Image" class="w-full h-48 object-cover rounded-lg mb-2">
+                <h3 class="font-bold text-white">Project 3: Infographics</h3>
+                <p class="text-white">This volleyball infographic provides a quick and visual overview of the game — from basic rules and court layout to player positions and key techniques.
+                     Whether you're a beginner or just need a refresher, this guide breaks down the essentials of volleyball in a simple and easy-to-understand format.</p>
+                <a href="https://github.com/Gabriel145-hue/Infographic.git" class="mt-4 inline-block bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-black transition duration-300">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="contact" class="p-4">
+        <h2 class="text-3xl font-bold text-center text-white">Connect</h2>
+        <p class="mt-4 text-center text-white">I would love to hear from you! Feel free to connect with me on social media:</p>
+        <div class="flex justify-center space-x-6 mt-4">
+            <div class="flex flex-col items-center">
+                <a href="https://www.facebook.com/gab.adiaton" class="hover:scale-105 transition duration-300">
+                    <img src="124010.png" alt="Facebook" class="w-10 h-10">
+                </a>
+                <span class="mt-2 text-sm text-white">Facebook</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <a href="https://www.facebook.com/messages/e2ee/t/9477441075710382/" class="hover:scale-105 transition duration-300">
+                    <img src="Facebook_Messenger_logo_2020.svg.png" alt="Messenger" class="w-10 h-10">
+                </a>
+                <span class="mt-2 text-sm text-white">Messenger</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <a href="https://www.instagram.com/gabrielhenricoo?igsh=ZXpqNDByaGNweHd2&utm_source=qr" class="hover:scale-105 transition duration-300">
+                    <img src="Instagram_icon.png" alt="Instagram" class="w-10 h-10">
+                </a>
+                <span class="mt-2 text-sm text-white">Instagram</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-red-600 to-black text-white p-6 text-center" id="footer">
+        <p>© 2025 Gabriel Henrico E. Adiaton INF239.</p>
+    </footer>
+
+    <script>
+        // Function to toggle between light and dark mode
+        function toggleTheme() {
+            const body = document.getElementById('body');
+            const themeIcon = document.getElementById('theme-icon');
+            const header = document.getElementById('header');
+            const footer = document.getElementById('footer');
+
+            // Check the current theme and toggle
+            if (body.classList.contains('bg-gray-100')) {
+                body.classList.remove('bg-gray-100', 'text-gray-800');
+                body.classList.add('bg-gray-900', 'text-white');
+                themeIcon.textContent = '🌙'; // Change icon to moon
+                localStorage.setItem('theme', 'dark'); // Save theme preference
+                header.classList.remove('bg-gradient-to-r', 'from-red-600', 'to-black');
+                header.classList.add('bg-gradient-to-r', 'from-[#0CBABA]', 'to-[#380036]');
+                footer.classList.remove('bg-gradient-to-r', 'from-red-600', 'to-black');
+                footer.classList.add('bg-gradient-to-r', 'from-[#0CBABA]', 'to-[#380036]');
+            } else {
+                body.classList.remove('bg-gray-900', 'text-white');
+                body.classList.add('bg-gray-100', 'text-gray-800');
+                themeIcon.textContent = '🌞'; // Change icon to sun
+                localStorage.setItem('theme', 'light'); // Save theme preference
+                header.classList.remove('bg-gradient-to-r', 'from-[#0CBABA]', 'to-[#380036]');
+                header.classList.add('bg-gradient-to-r', 'from-red-600', 'to-black');
+                footer.classList.remove('bg-gradient-to-r', 'from-[#0CBABA]', 'to-[#380036]');
+                footer.classList.add('bg-gradient-to-r', 'from-red-600', 'to-black');
+            }
+        }
+
+        // Check for saved user preference
+        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+        const body = document.getElementById('body');
+        const themeIcon = document.getElementById('theme-icon');
+
+        // Apply the saved theme on page load
+        if (currentTheme === 'dark') {
+            body.classList.remove('bg-gray-100', 'text-gray-800');
+            body.classList.add('bg-gray-900', 'text-white');
+            themeIcon.textContent = '🌙'; // Set icon to moon
+            header.classList.add('bg-gradient-to-r', 'from-[#0CBABA]', 'to-[#380036]');
+            footer.classList.add('bg-gradient-to-r', 'from-[#0CBABA]', 'to-[#380036]');
+        } else {
+            body.classList.add('bg-gray-100', 'text-gray-800');
+            themeIcon.textContent = '🌞'; // Set icon to sun
+            header.classList.add('bg-gradient-to-r', 'from-red-600', 'to-black');
+            footer.classList.add('bg-gradient-to-r', 'from-red-600', 'to-black');
+        }
+
+        // Add event listener to the theme toggle button
+        document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+    </script>
+</body>
+</html>

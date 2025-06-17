@@ -1,0 +1,56 @@
+/* Base Styles */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode Styles */
+body.light {
+    background-color: #f7fafc; /* Light background */
+    color: #2d3748; /* Dark text color */
+}
+
+header.light {
+    background: linear-gradient(to right, #4a5568, #2b6cb0); /* Light gradient for header */
+}
+
+footer.light {
+    background: linear-gradient(to right, #4a5568, #2b6cb0); /* Light gradient for footer */
+}
+
+.skill-box.light {
+    background: white; /* White background for skill boxes */
+}
+
+.project-card.light {
+    background: white; /* White background for project cards */
+}
+
+.bg-gray-200.light {
+    background-color: #edf2f7; /* Light background for connect section */
+}
+
+/* Dark Mode Styles */
+body.dark {
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text color */
+}
+
+header.dark {
+    background: linear-gradient(to right, #333, #444); /* Dark gradient for header */
+}
+
+footer.dark {
+    background: linear-gradient(to right, #333, #444); /* Dark gradient for footer */
+}
+
+.skill-box.dark {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for skill boxes */
+}
+
+.project-card.dark {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for project cards */
+}
+
+.bg-gray-200.dark {
+    background-color: #2a2a2a; /* Dark background for connect section */
+}

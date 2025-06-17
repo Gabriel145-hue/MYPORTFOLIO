@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>About Me - Gabriel Henrico E. Adiaton</title>
+    <style>
+        /* Dark and Light Mode Styles */
+        body.light {
+            background-color: #f7fafc; /* Light background */
+            color: #2d3748; /* Dark text */
+        }
+
+        body.dark {
+            background-color: #1a202c; /* Dark background */
+            color: #ffffff; /* Light text */
+        }
+
+        .theme-toggle {
+            cursor: pointer;
+        }
+
+        /* Hover effect for Back to Home button */
+        .back-home-button {
+            transition: background-color 0.3s ease;
+        }
+
+        .back-home-button:hover {
+            background-color: black; /* Change to black on hover */
+        }
+
+        /* Zoom-out effect for profile picture */
+        .zoom-out {
+            transform: scale(2); /* Scale up to 2 times */
+            transition: transform 0.5s ease; /* Smooth transition */
+            z-index: 10; /* Bring to front */
+            position: relative; /* Position relative for z-index to work */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white dark" id="body">
+    <!-- Navigation Header -->
+    <header class="bg-gradient-to-r from-teal-600 to-teal-400 text-white p-4 fixed top-0 w-full z-10 shadow-lg">
+        <nav class="flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Gabriel Henrico E. Adiaton</h1>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="theme-toggle bg-gray-700 text-white p-2 rounded-full hover:bg-gray-600 transition duration-300 flex items-center">
+                    <span id="theme-icon" class="text-xl">🌞</span>
+                </button>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:bg-yellow-300 hover:text-gray-800 transition duration-300 p-2 rounded">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section class="p-6 mt-24">
+        <h2 class="text-3xl font-bold text-center text-teal-400">All About Me</h2>
+        <div class="flex flex-col items-center mt-6">
+            <img id="profile-pic" src="Profile.png" alt="Gabriel Henrico E. Adiaton" class="w-48 h-48 rounded-full mb-4 shadow-lg cursor-pointer">
+            <p class="text-lg"><strong>Name:</strong> Gabriel Henrico E. Adiaton</p>
+            <p class="text-lg"><strong>Birthday:</strong> March 15, 2005</p>
+            <p class="text-lg"><strong>Age:</strong> 20</p>
+        </div>
+
+        <!-- Panels for each section -->
+        <div class="mt-8 space-y-6">
+            <div class="bg-black bg-opacity-50 shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+                <h3 class="text-xl font-semibold text-teal-600">My Favorite Tech Things</h3>
+                <ul class="list-disc list-inside mt-2">
+                    <li><strong>Game:</strong> Call of Duty: Black Ops</li>
+                    <li><strong>Music genre:</strong> Hip-Hop and R&B</li>
+                    <li><strong>Movie:</strong> The Notebook</li>
+                    <li><strong>Color:</strong> Minimalist</li>
+                    <li><strong>TV Show:</strong> FOREVER</li>
+                    <li><strong>Place:</strong> I'd like to try programming near city lights with some coffee</li>
+                    <li><strong>Programming Language:</strong> JavaScript and C</li>
+                </ul>
+            </div>
+
+            <div class="bg-black bg-opacity-50 shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+                <h3 class="text-xl font-semibold text-teal-600">I Am Proficient In</h3>
+                <ul class="list-disc list-inside mt-2">
+                    <li>Troubleshooting issues efficiently, especially before my morning coffee.</li>
+                    <li>Crafting code that is both clean and easy to understand (most of the time).</li>
+                </ul>
+            </div>
+
+            <div class="bg-black bg-opacity-50 shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+                <h3 class="text-xl font-semibold text-teal-600">My Interests Include</h3>
+                <ul class="list-disc list-inside mt-2">
+                    <li>Developing small-scale projects to enhance my skills.</li>
+                    <li>Creating intuitive and visually appealing UI/UX designs.</li>
+                    <li>Staying updated with the latest technological advancements.</li>
+                    <li>Enjoying coding livestreams to learn from others and share insights.</li>
+                    <li>Engaging in logic games that challenge my problem-solving abilities.</li>
+                    <li>Assisting others in their coding journey and sharing knowledge.</li>
+                </ul>
+            </div>
+
+            <div class="bg-black bg-opacity-50 shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+                <h3 class="text-xl font-semibold text-teal-600">Color Sample</h3>
+                <div class="flex space-x-2 mt-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded"></div>
+                    <div class="w-10 h-10 bg-blue-300 rounded"></div>
+                    <div class="w-10 h-10 bg-green-300 rounded"></div>
+                    <div class="w-10 h-10 bg-yellow-300 rounded"></div>
+                    <div class="w-10 h-10 bg-red-300 rounded"></div>
+                    <div class="w-10 h-10 bg-purple-300 rounded"></div>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="mt-6 inline-block back-home-button bg-orange-500 text-white py-3 px-8 rounded-full hover:bg-black transition duration-300">Back to Home</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-teal-600 to-teal-400 text-white p-6 text-center">
+        <p>© 2025 Gabriel Henrico E. Adiaton INF239.</p>
+    </footer>
+
+    <script>
+        // Function to toggle between light and dark mode
+        function toggleTheme() {
+            const body = document.getElementById('body');
+            const themeIcon = document.getElementById('theme-icon');
+
+            // Check the current theme and toggle
+            if (body.classList.contains('dark')) {
+                body.classList.remove('dark');
+                body.classList.add('light');
+                themeIcon.textContent = '🌙'; // Change icon to moon
+                localStorage.setItem('theme', 'light'); // Save theme preference
+            } else {
+                body.classList.remove('light');
+                body.classList.add('dark');
+                themeIcon.textContent = '🌞'; // Change icon to sun
+                localStorage.setItem('theme', 'dark'); // Save theme preference
+            }
+        }
+
+        // Check for saved user preference
+        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark';
+        const body = document.getElementById('body');
+        const themeIcon = document.getElementById('theme-icon');
+
+        // Apply the saved theme on page load
+        if (currentTheme === 'light') {
+            body.classList.remove('dark');
+            body.classList.add('light');
+            themeIcon.textContent = '🌙'; // Set icon to moon
+        } else {
+            body.classList.add('dark');
+            themeIcon.textContent = '🌞'; // Set icon to sun
+        }
+
+        // Add event listener to the theme toggle button
+        document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+        // Zoom out effect for profile picture
+        const profilePic = document.getElementById('profile-pic');
+        profilePic.addEventListener('click', function() {
+            this.classList.toggle('zoom-out');
+            // Optionally, you can add a timeout to reset the zoom after a few seconds
+            setTimeout(() => {
+                this.classList.remove('zoom-out');
+            }, 2000); // Reset after 2 seconds
+        });
+    </script>
+</body>
+</html>
